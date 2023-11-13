@@ -93,4 +93,4 @@ kubectl apply -f .\gitops-workshop-application.yaml -n argocd
 Make sure you stop all running processes and close all the terminal windows in VS Code before proceeding to the next 
 assignment.
 
-Go to [assignment 7](../Assignment07/README.md).
+Go to [assignment 8](../Assignment08/README.md).
