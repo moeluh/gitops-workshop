@@ -80,8 +80,13 @@ spec:
 
 3. Run the following command to create the project
 ```console
-kubectl apply -f .\gitops-workshop-aaplication.yaml -n argocd
+kubectl apply -f .\gitops-workshop-application.yaml -n argocd
 ```
+
+4. Open ArgoCD in your browser and login. You will see an application in the UI and that it's synced.
+
+
+5. Browse to the application in your browser to test it. http://localhost:8082/
 
 ## Next assignment
 

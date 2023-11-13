@@ -67,42 +67,19 @@ metadata:
     app: gitops-workshop
   name: gitops-workshop-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: gitops-workshop
   ports:
   - name: http
-    port: 80
+    port: 8082
     protocol: TCP
     targetPort: 80
+status:
+  loadBalancer: {}
 ```
 
-6. Create another yaml file within your infrastructure repository
-
-    > I created a file called gitops-workshop-ingress.yaml
-
-7. Add the following to the file
-```yaml
-apiVersion: v1
-kind: Ingress
-metadata:
-  labels:
-    app: gitops-workshop
-  name: gitops-workshop-ingress
-  annotations:
-    ingress.kubernetes.io/ssl-redirect: "false"
-    traefik.ingress.kubernetes.io/rewrite-target: /
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /app
-        backend:
-          serviceName: gitops-workshop-service
-          servicePort: 80
-```
-
-8. Push the files to the repository
+6. Push the files to the repository
 
 ## Next assignment
 
