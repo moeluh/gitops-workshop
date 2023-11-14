@@ -12,8 +12,3 @@ Now that ArgoCD is syncing let's change the infrastructure a bit.
 3. Commit and push the change
 
 4. Open ArgoCD and see if the changes are applied automatically
-
-2. Run the following command to create a new namespace on your local kubernetes cluster
-```console
-kubectl create namespace dev
-```
